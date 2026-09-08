@@ -24,4 +24,10 @@ class BankAccount {
       _balance -= amount;
     }
   }
+
+  void displayAccountInfo() {
+    print(
+      'Account Holder: $accountHolderName Account Number: $accountNumber Balance: ${_balance % 1 == 0 ? _balance.toInt() : _balance}',
+    );
+  }
 }
