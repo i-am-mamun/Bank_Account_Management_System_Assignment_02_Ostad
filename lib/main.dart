@@ -31,3 +31,25 @@ class BankAccount {
     );
   }
 }
+
+void main() {
+  // Creating Account 1
+  BankAccount account1 = BankAccount('Rahim', 1001, 5000);
+  account1.displayAccountInfo();
+
+  // Deposit money into account 1
+  account1.deposit(2000);
+  print(
+    'After Deposit: Balance: ${account1.balance % 1 == 0 ? account1.balance.toInt() : account1.balance}',
+  );
+
+  // Withdraw money from account 1
+  account1.withdraw(1500);
+  print(
+    'After Withdrawal: Balance: ${account1.balance % 1 == 0 ? account1.balance.toInt() : account1.balance}',
+  );
+
+  // Creating Account 2
+  BankAccount account2 = BankAccount('Karim', 1002, 8000);
+  account2.displayAccountInfo();
+}
